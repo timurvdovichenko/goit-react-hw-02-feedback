@@ -1,14 +1,18 @@
 import PropTypes from 'prop-types';
 import Button from './Button';
-import { ListStyled } from './Feedback.styled';
+import { ListStyled } from './Common.styled';
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
     <ListStyled>
       {options.map(option => {
-        if (option === 'good' || option === 'bad' || option === 'neutral') {
-          return <Button key={option} name={option} onLeaveFeedback={onLeaveFeedback} />;
-        } else return undefined;
+        return (
+          <Button
+            key={option}
+            name={option}
+            onLeaveFeedback={e => onLeaveFeedback(e.currentTarget.name)}
+          />
+        );
       })}
     </ListStyled>
   );

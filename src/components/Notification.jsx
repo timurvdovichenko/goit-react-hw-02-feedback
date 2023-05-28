@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { PararagraphStyled } from './Feedback.styled';
+import { PararagraphStyled } from './Notification.styled';
 const Notification = ({ message }) => {
   return <PararagraphStyled>{message}</PararagraphStyled>;
 };

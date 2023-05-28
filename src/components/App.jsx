@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import { Component } from 'react';
-import Notification from './Feedback/Notification';
-import Section from './Feedback/Section';
-import FeedbackOptions from './Feedback/FeedbackOptions';
-import Statistics from './Feedback/Statistics';
+import Notification from './Notification';
+import Section from './Section';
+import FeedbackOptions from './FeedbackOptions';
+import Statistics from './Statistics';
 
 class App extends Component {
   static defaultProps = {
@@ -17,8 +17,7 @@ class App extends Component {
     bad: this.props.badInitialValue,
   };
 
-  onClickChange = e => {
-    const { name } = e.target;
+  onClickChange = name => {
     this.setState(prevState => {
       return { [name]: prevState[name] + 1 };
     });

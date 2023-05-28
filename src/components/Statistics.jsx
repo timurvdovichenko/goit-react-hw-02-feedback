@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { ListStyled, ListItemStyled } from './Feedback.styled';
+import { ListItemStyled, ListStyled } from './Common.styled';
 const Statistics = ({ good, neutral, bad, total, positivePercentage = 0 }) => {
   return (
     <ListStyled column={'column'}>

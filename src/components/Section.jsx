@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { H2Styled } from './Feedback.styled';
+import { H2Styled } from './Section.styled';
 const Section = ({ title, children }) => {
   return (
     <section>
